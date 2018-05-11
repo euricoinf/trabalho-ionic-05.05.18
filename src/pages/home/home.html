@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Locais cadastrados</h3>
+
+  <h4>Real time database com Observable</h4>
+  <ion-list *ngFor="let item of lista" >
+      <button ion-item padding-left style="border-bottom: 1px grey solid" (click)="abreDetalhes(item)" >
+          {{item.payload.val().nome}} - {{item.payload.val().valor}}
+      </button>
+  </ion-list>
+  <br/>
+</ion-content>
